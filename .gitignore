@@ -399,3 +399,8 @@ FodyWeavers.xsd
 
 # Virtual environment
 *.venv
+
+C:/Users/A-SPAC04/Documents/GitHub/opgaver_uge_4/data/*
+C:/Users/A-SPAC04/Documents/GitHub/opgaver_uge_4/scr/tester.py
+C:/Users/A-SPAC04/Documents/GitHub/opgaver_uge_4/queryex
+C:/Users/A-SPAC04/Documents/GitHub/opgaver_uge_4/.gitattributes

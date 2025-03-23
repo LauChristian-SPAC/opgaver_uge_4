@@ -6,7 +6,7 @@ data = pd.read_csv("data/orders_combined.csv")
 db = DatabaseConnection(host="localhost", user="root", password="250404", database="orders_combined")
 db.connect()
 connection = db.get_connection()
-cursorObject = connection.cursor()
+cursor_object = connection.cursor()
 
 orders_combined_table = """CREATE TABLE orders_combined (
 id INT,
@@ -17,10 +17,10 @@ product_name VARCHAR(50),
 product_price FLOAT
 )"""
 
-cursorObject.execute(orders_combined_table)
+cursor_object.execute(orders_combined_table)
 
 for index, row in data.iterrows():
-    cursorObject.execute(
+    cursor_object.execute(
         "INSERT INTO orders_combined (id, date_time, customer_name, customer_email, product_name, product_price) VALUES (%s, %s, %s, %s, %s, %s)",
         (row['id'], row['date_time'], row['customer_name'], row['customer_email'], row['product_name'], row['product_price'])
     )
